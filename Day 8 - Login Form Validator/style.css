@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f2726a;
+  --primary-background-color: #dadada;
+  --primary-black: black;
+  --primary-red: red;
+  --primary-green: green;
+  --primary-white: white;
+
+  --primary-success-color: #2691d9;
+  --primary-error-color: #e74c3c;
+
+  --primary-margin: 16px;
+  --primary-padding: 16px;
+
+  --primary-border-radius: 8px;
+  --primary-font-size-button: 35px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(120deg, #3ca7ee, #9b408f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+}
+
+.container {
+    width: 400px;
+    border: none;
+    border-radius: var(--primary-border-radius);
+    background: var(--primary-white);
+    padding: 40px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #adadad;
+}
+
+.form-control span {
+  position: absolute;
+  border-bottom: 2px solid var(--primary-success-color);
+  top: 38px;
+  left: 0;
+  width: 0%;
+  transition: 0.5s;
+}
+
+.form-control input:focus ~ span {
+  width: 100%;
+}
+
+.form-control.error small {
+  color: var(--primary-red);
+}
+
+.form-control.error input {
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.btn-login {
+  margin: 40px 0px;
+  border-radius: var(--primary-border-radius);
+  height: 50px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: var(--primary-success-color);
+  color: var(--primary-white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-login:hover {
+  background-color: #08609a;
+}
+
+.signup-link {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.a-Signup {
+  color: #3ca7ee;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.a-Signup:hover {
+  text-decoration: underline;
+}

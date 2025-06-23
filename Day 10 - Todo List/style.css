@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f2726a;
+  --primary-background-color: #dadada;
+  --primary-black: black;
+  --primary-red: red;
+  --primary-green: green;
+  --primary-white: white;
+
+  --primary-success-color: #2691d9;
+  --primary-error-color: #e74c3c;
+
+  --primary-margin: 16px;
+  --primary-padding: 16px;
+
+  --primary-border-radius: 8px;
+  --primary-font-size-button: 35px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, #ffe000, #799f0c);
+  font-family: sans-serif;
+}
+
+.container {
+  width: 400px;
+  margin: 100px auto;
+  border-radius: var(--primary-border-radius);
+  padding-top: 10px;
+  background-color: var(--primary-white);
+  overflow: hidden;
+}
+
+form {
+  border-bottom: 1px solid #aaa;
+  padding: 10px 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  size: 24px;
+  width: 100%;
+  margin-right: 15px;
+  border: none;
+  outline: none;
+}
+
+form button {
+  background: yellowgreen;
+  padding: 5px 15px;
+  color: var(--primary-white);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: var(--primary-border-radius);
+}
+
+.todos {
+  list-style: none;
+}
+
+.todos li {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.todos li span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden ;
+}
+
+li.completed {
+  color: #aaa;
+}
+
+li.completed span {
+  text-decoration: line-through;
+}

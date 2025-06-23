@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f2726a;
+  --primary-background-color: #dadada;
+  --primary-black: black;
+  --primary-red: red;
+  --primary-green: green;
+  --primary-white: white;
+  --primary-orange: orange;
+
+  --primary-green-light: rgba(0, 128, 0, 0.5);
+  --primary-orange-light: rgba(255, 165, 0, 0.5);
+  --primary-red-light: rgba(255, 0, 0, 0.5);
+
+  --primary-success-color: #2691d9;
+  --primary-error-color: #e74c3c;
+
+  --primary-margin: 16px;
+  --primary-padding: 16px;
+
+  --primary-border-radius: 8px;
+  --primary-font-size-button: 35px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: var(--primary-white);
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  gap: 20px;
+  display: flex;
+}
+
+.control button {
+  height: 50px;
+  width: 200px;
+  border-radius: var(--primary-border-radius);
+  border: none;
+  outline: none;
+  color: var(--primary-white);
+  font-size: 16px;
+}
+
+.success {
+  background-color: green;
+}
+
+.warning {
+  background: orange;
+}
+
+.error {
+  background: red;
+}
+
+.toasts {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-white);
+  padding: 20px;
+  border-radius: var(--primary-border-radius);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  animation: slide_show 2s ease forwards;
+}
+
+.toast .countdown {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 6px;
+  animation: countdown_kf 2s ease forwards;
+}
+
+.toasts .success {
+  background-color: var(--primary-green-light);
+  border-left: 6px solid var(--primary-green);
+  transition: all 1s;
+}
+
+.toasts .warning {
+  background-color: var(--primary-orange-light);
+  border-left: 6px solid var(--primary-orange);
+  transition: all 1s;
+}
+
+.toasts .error {
+  background-color: var(--primary-red-light);
+  border-left: 6px solid var(--primary-red);
+  transition: all 1s;
+}
+
+.toast.success .countdown {
+  background-color: var(--primary-green);
+}
+
+.toast.warning .countdown {
+  background-color: var(--primary-orange);
+}
+
+.toast.error .countdown {
+  background-color: var(--primary-red);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes countdown_kf {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes slide_show {
+  0% {
+    transform: translateX(100%);
+  }
+
+  25% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}

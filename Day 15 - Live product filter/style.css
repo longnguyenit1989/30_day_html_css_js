@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --primary-color: #f2726a;
+  --primary-background-color: #dadada;
+  --primary-black: black;
+  --primary-red: red;
+  --primary-green: green;
+  --primary-white: white;
+  --primary-orange: orange;
+
+  --primary-green-light: rgba(0, 128, 0, 0.5);
+  --primary-orange-light: rgba(255, 165, 0, 0.5);
+  --primary-red-light: rgba(255, 0, 0, 0.5);
+
+  --primary-success-color: #2691d9;
+  --primary-error-color: #e74c3c;
+
+  --primary-margin: 16px;
+  --primary-padding: 16px;
+
+  --primary-border-radius: 8px;
+  --primary-font-size-button: 35px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadada;
+}
+
+h1 {
+  margin: 20px;
+  font-weight: 600px;
+}
+
+.container {
+  width: 500px;
+  height: 600px;
+  background-color: var(--primary-white);
+  margin: 50px auto;
+  border-radius: var(--primary-border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px 20px;
+  overflow-y: scroll;
+}
+
+.search {
+  border: 1px solid var(--primary-black);
+  display: flex;
+  justify-content: start;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: var(--primary-border-radius);
+  margin-bottom: 30px;
+}
+
+.search input {
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.search i {
+  color: #333;
+  padding: 5px;
+}
+
+.product {
+  display: flex;
+  padding: 10px;
+}
+
+.product img {
+  width: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.product .info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product .name, .product .price {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.product .name {
+  font-weight: bold;
+}
+
+.product:hover {
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}

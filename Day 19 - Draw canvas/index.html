@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tool">
+
+        <button id="clear" title="Clear">
+            <i class="fa-solid fa-eraser"></i>
+        </button>
+
+        <button id="undo" title="Undo">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="redo" title="Redo">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <button id="decrease">-</button>
+
+        <button id="size">20</button>
+
+        <button id="increase">+</button>
+
+        <input
+            type="color"
+            id="color"
+            value="#000000"
+            title="Brush Color">
+
+        <button id="save" title="Save">
+            <i class="fa-regular fa-floppy-disk"></i>
+        </button>
+
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
